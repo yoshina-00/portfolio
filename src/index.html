@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/output.css">
+    <title>ポートフォリオ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<body class="font-NotoSerifJP bg-body text-black">
+    <!--navigation bar-->
+    <header class="py-6">
+        <div class="container mx-auto flex justify-between items-center px-8 md:px-14 lg:px-24 w-full">
+            <div class="text-lg font-bold items-center">
+                <svg class="header-brand__logo w-8 h-8 inline-block" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 180 180">
+                    <path
+                        d="M166.27,23.11c-2.6-1.1-4.35-1.77-6.99-2.8-2.94-1.14-5.78-2.7-8.81-3.42-9.8-2.32-18.35-.26-24.23,8.5-8.51,12.66-19.13,23.43-30.07,33.89-8.85,8.46-17.78,16.79-27.83,23.97-7.99,5.71-15.49,12.36-22.23,19.5-6.44,6.82-11.9,14.48-20.35,19.19-1.78,.99-2.8,3.36-4.17,5.1-.26,.68,.38,1,.9,1.05,5.18-2.5,10.37-5.01,15.55-7.51-1.17,1.71-2.67,2.84-4.06,4.08-2.36,2.09-5.45,3.85-6.79,6.49-2.05,4.02-5.52,6.15-8.67,8.81-3.03,2.55-5.68,4.61-8.62,7.25-1.84,1.65-3.47,3.53-5.19,5.31-.34,.34-.06,.6,.42,.54,.94-.33,1.87-.65,3.27-1.14-1.25,1.41-2.18,2.46-3.11,3.51-.21,.35-.1,.77,.37,.68,1.92-.59,5.03-2.4,6.62-3.48,6.21-4.01,9.72-5.81,15.16-9.87,1.97-1.47,8.24-4.25,10.35-5.43,12.85-7.16,21.38-12.61,36.95-12.92-1.78,3.05-.31,3.55,2.11,3.38,.42-.03,.88,.2,1.29,.39,1.15,.52,2.29,1.09,3.84,1.83,.2,.48,1.09,1.67,1.12,2.88,.11,5,3.31,7.67,6.86,10.42,4.08,3.16,7.81,6.77,11.69,10.19,.22,.13-.1,1.04-.55,1.23-1.58,.11-3.16,.21-4.74,.34-2.74,.22-5.54,.21-8.21,.75-2.07,.42-3.55,1.83-3.09,4.65,.97-1.14,2.21-2.68,3.12-2.7,.57-.28,2.65,1.68,3.63,1.87,2.13,.4,4.31,.61,6.47,.74,9.78,.61,17.05,4.41,24.61,10.21,.2,.15,1.33,.21,1.82,.95,.47-.73,.63-1.32,.1-2.05,2.88-.6,6.37,1.54,8.3-2.38,1.45,.13,2.77,1.2,4.09,1.96-2.2-5.68-9.8-2.48-14.11-5.64-.43-.28-.09-1.9,1.05-2.31,1.05-.12,1.7,.47,2.81,.95-1.08-3.75-4.73-2.12-7.28-4.37,1.75,0,2.82-.04,3.88,.01,1.46,.08,3.46,.89,4.28,.22,2.64-2.16,4.04-.48,6.05,1.93,0-3.17-1.42-4.12-3.35-4.7-3.02-.9-6.4-.27-9.16-2.51-.69-.56-2.61-.21-3.61,.35-4.01,2.25-7.74,1.2-10.66-1.47-4.36-3.98-8.24-8.5-12.18-12.92-.68-.77-1.17-2.28-.91-3.22,1.47-5.33,3.24-10.53,7.95-13.78,1.45-.81,2.96-.87,4.75-1.01,1.14-1.66,2.71-3.97,4.58-2.99,.72,.63,3.07-5.48,3.93-2.83,6.55-3.8,10.98-10.68,14.6-18.79,3.09-4.57,5.31-9.65,6.88-15.15,2.25-7.88,4.81-15.67,7.05-23.55,1.37-4.83,2.33-9.77,3.59-14.63,.39-1.5,.75-3.3,1.77-4.3,4.9-4.76,10.04-8.35,17.5-9.23,3.04-.36,5.68,.23,7.36,.13,.89,0,1.41-.81,1.41-.81-2.61-2.25-6.07-4.06-9.08-5.34Z">
+                    </path>
+                </svg>
+            </div>
+            <div class="space-x-12 hidden md:flex items-center">
+                <a href="#home" class="hover:text-selectedText transition-all duration-300">ホーム</a>
+                <a href="#portfolio" class="hover:text-selectedText transition-all duration-300">ポートフォリオ</a>
+                <a href="#skills" class="hover:text-selectedText transition-all duration-300">スキル一覧</a>
+                <a href="#contact" class="hover:text-selectedText transition-all duration-300">お問い合わせ</a>
+
+            </div>
+            <div class="md:hidden "><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </header>
+
+    <!--hero-->
+    <div id="home" class="container mt-16 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
+        <div class="flex flex-wrap md:flex-nowrap">
+            <div class="md:my-36 lg:ml-20 md:justify-start mx-auto max-w-xl flex flex-wrap items-end">
+                <h1
+                    class="font-bold text-5xl text-black text-center md:text-left lg:text-7xl md:text-6xl justify-center">
+                    Naoto <br />
+                    Yoshikawa <br />
+                </h1>
+                <button
+                    class="px-6 py-0 bg-button font-bold rounded-lg hover:trasition-all duration-300 mt-10 justify-center">
+                    <span class="hover:text-selectedText transition-all duration-300"><i
+                            class="fa-solid fa-anchor"></i>もっと見る</span>
+                </button>
+            </div>
+            <!-- <svg class="hero__bg-2 fadein md:absolute lg:right-52 md:w-3/5 w-10/12 mt-12 md:mt-0 right-6 mx-auto -z-10 lg:w-3/6"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 320">
+                <path
+                    d="M260.88,293.61c103.44,15.15,197.9-54.19,160.68-156.06C383.51,33.37,188.25,7.95,96.94,33.53,5.08,59.26-6.9,161.54,75.12,183.89c90.51,24.66,82.31,94.57,185.75,109.72Z">
+                </path> -->
+            </svg>
+            <img src="./images/boat_new.gif" alt="image"
+                class="md:absolute  lg:right-52 md:w-3/5 w-10/12 mt-12 md:mt-0 right-6 mx-auto -z-10 lg:w-3/6">
+        </div>
+    </div>
+
+    <!--portfolio-->
+    <div id="portfolio" class="container mt-64 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
+        <section class="w-full">
+            <h2 class="secondary-title">私のポートフォリオ</h2>
+            <p class="section-paragraph:">
+                私が作成したプロダクト
+            </p>
+            <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
+                <img src="./images/portfolio1.jpg" alt=""
+                    class="w-full h-36 lg:h-72 object-cover rounded-md cursor-pointer">
+                <img src="./images/portfolio2.jpg" alt=""
+                    class="w-full h-36 lg:h-72 object-cover rounded-md cursor-pointer">
+                <img src="./images/portfolio3.jpg" alt=""
+                    class="w-full h-36 lg:h-72 object-cover rounded-md cursor-pointer">
+                <img src="./images/portfolio4.jpg" alt=""
+                    class="w-full h-36 lg:h-72 object-cover rounded-md cursor-pointer">
+                <img src="./images/portfolio5.jpg" alt=""
+                    class="w-full h-36 lg:h-72 object-cover rounded-md cursor-pointer">
+                <img src="./images/portfolio6.jpg" alt=""
+                    class="w-full h-36 lg:h-72 object-cover rounded-md cursor-pointer">
+            </div>
+        </section>
+    </div>
+
+    <!--skills-->
+    <div id="skills" class="container mt-64 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
+        <section class="w-full">
+            <h2 class="secondary-title">スキル一覧</h2>
+            <p class="section-paragraph:">
+                私が取得したスキル
+            </p>
+            <div class="my-16">
+                <div
+                    class="w-full border border-body p-16 lg:py-20 flex justify-center lg:justify-start flex-wrap lg:space-x-32 hover:border-black transition-all duration-300 cursor-pointer">
+
+                    <!-- ロゴ -->
+                    <div class="mb-6 lg:mb-0 self-center">
+                        <i class="fa-brands fa-java text-8xl"></i>
+                    </div>
+
+                    <!-- 言語の説明 -->
+                    <div class="text-center flex flex-wrap justify-center lg:text-left lg:block">
+                        <h3 class="text-3xl font-semibold">Java</h3>
+                        <div class="flex flex-wrap w-full justify-center gap-3 lg:w-auto lg:justify-start mt-6 mb-8">
+                            <div class="badge">webサイト</div>
+                            <div class="badge">バックエンド開発</div>
+                        </div>
+                        <p class="text-secondary">
+                            説明
+                        </p>
+                    </div>
+
+
+
+                </div>
+                <div
+                    class="w-full border border-body p-16 lg:py-20 flex justify-center lg:justify-start flex-wrap lg:space-x-32 hover:border-black transition-all duration-300 cursor-pointer">
+
+                    <!-- ロゴ -->
+                    <div class="mb-6 lg:mb-0 self-center">
+                        <i class="fa-brands fa-java text-8xl"></i>
+                    </div>
+
+                    <!-- 言語の説明 -->
+                    <div class="text-center flex flex-wrap justify-center lg:text-left lg:block">
+                        <h3 class="text-3xl font-semibold">Java</h3>
+                        <div class="flex flex-wrap w-full justify-center gap-3 lg:w-auto lg:justify-start mt-6 mb-8">
+                            <div class="badge">webサイト</div>
+                            <div class="badge">バックエンド開発</div>
+                        </div>
+                        <p class="text-secondary">
+                            説明
+                        </p>
+                    </div>
+
+
+
+                </div>
+                <div
+                    class="w-full border border-body p-16 lg:py-20 flex justify-center lg:justify-start flex-wrap lg:space-x-32 hover:border-black transition-all duration-300 cursor-pointer">
+
+                    <!-- ロゴ -->
+                    <div class="mb-6 lg:mb-0 self-center">
+                        <i class="fa-brands fa-java text-8xl"></i>
+                    </div>
+
+                    <!-- 言語の説明 -->
+                    <div class="text-center flex flex-wrap justify-center lg:text-left lg:block">
+                        <h3 class="text-3xl font-semibold">Java</h3>
+                        <div class="flex flex-wrap w-full justify-center gap-3 lg:w-auto lg:justify-start mt-6 mb-8">
+                            <div class="badge">webサイト</div>
+                            <div class="badge">バックエンド開発</div>
+                        </div>
+                        <p class="text-secondary">
+                            説明
+                        </p>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <!--contact-->
+    <div id="contact"
+        class="container mt-52 mb-20 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
+        <section class="w-full">
+            <h2 class="secondary-title">お問い合わせ</h2>
+            <p class="section-paragraph">
+                気になる方はご一報ください
+            </p>
+            <div class="w-full grid lg:grid-cols-2 gap-8 lg:gap-32 mt-16">
+                <div class="space-y-12">
+                    <div>
+                        <label class="text-black block mb-6 text-xl font-bold">お名前</label>
+                        <input type="text" class="w-full border-black bg-white pw-4 py-4">
+                    </div>
+                    <div>
+                        <label class="text-black block mb-6 text-xl font-bold">メールアドレス</label>
+                        <input type="text" class="w-full  border-black bg-white pw-4 py-4">
+                    </div>
+                    <div>
+                        <label class="text-black block mb-6 text-xl font-bold">メッセージ</label>
+                        <input type="text" class="w-full  border-black bg-white pw-4 py-4">
+                    </div>
+                    <div class="flex justify-between">
+                        <button class="font-bold hover:text-selectedText transition-all duration-300">送信</button>
+                        <button type="reset"
+                            class="font-bold hover:text-selectedText transition-all duration-300">クリア</button>
+                    </div>
+                </div>
+                <div>
+                    <p>080-9389-4027</p>
+                    <a href="mailto:jichuanzhidou@gmail.com"
+                        class="hover:text-selectedText transition-all duration-300">jichuanzhidou@gmail.com</a>
+                    <div class="mt-10 space-x-6">
+                        <a href="#">
+                            <i class="fa-brands fa-x-twitter text-3xl text-black"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-instagram text-3xl text-pink-400"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+<footer class="container mt-64 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
+    <div class="footer_contents">
+        <div class="footer_logo hover:text-selectedText transition-all duration-300">
+            <a href="">Naoto Yoshikawa Portfolio</a>
+        </div>
+        <p class="copyright">©️2024 naoto yoshikawa. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</html>
