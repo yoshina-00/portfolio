@@ -29,7 +29,8 @@
             </div>
             <div class="space-x-12 hidden md:flex items-center">
                 <a href="#home" class="hover:text-selectedText transition-all duration-300">ホーム</a>
-                <a href="#portfolio" class="hover:text-selectedText transition-all duration-300">ポートフォリオ</a>
+                <a href="#about" class="hover:text-selectedText transition-all duration-300">私について</a>
+                <a href="#portfolio" class="hover:text-selectedText transition-all duration-300">プロジェクト</a>
                 <a href="#skills" class="hover:text-selectedText transition-all duration-300">スキル一覧</a>
                 <a href="#contact" class="hover:text-selectedText transition-all duration-300">お問い合わせ</a>
 
@@ -47,11 +48,11 @@
                     Naoto <br />
                     Yoshikawa <br />
                 </h1>
-                <button
+                <!-- <button
                     class="px-6 py-0 bg-button font-bold rounded-lg hover:trasition-all duration-300 mt-10 justify-center">
                     <span class="hover:text-selectedText transition-all duration-300"><i
                             class="fa-solid fa-anchor"></i>もっと見る</span>
-                </button>
+                </button> -->
             </div>
             <!-- <svg class="hero__bg-2 fadein md:absolute lg:right-52 md:w-3/5 w-10/12 mt-12 md:mt-0 right-6 mx-auto -z-10 lg:w-3/6"
                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 320">
@@ -59,30 +60,44 @@
                     d="M260.88,293.61c103.44,15.15,197.9-54.19,160.68-156.06C383.51,33.37,188.25,7.95,96.94,33.53,5.08,59.26-6.9,161.54,75.12,183.89c90.51,24.66,82.31,94.57,185.75,109.72Z">
                 </path> -->
             </svg>
-            <img src="./images/boat_new.gif" alt="image"
+            <img src="./src/images/boat_new.gif" alt="image"
                 class="md:absolute  lg:right-52 md:w-3/5 w-10/12 mt-12 md:mt-0 right-6 mx-auto -z-10 lg:w-3/6">
         </div>
+    </div>
+
+    <!--about-->
+    <div id="about" class="container mt-64 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
+        <section class="w-full">
+            <h2 class="secondary-title">私について
+            </h2>
+            <p class="section-paragraph:">
+                自己紹介
+            </p>
+            <!--写真-->
+            <div>
+                <p class="">
+                    当webサイトをご覧いただきありがとうございます。学生時代は私の学部に中国人留学生が多く会話する機会も多かったことや、ゼミで米中の貿易（自動車産業）について学習したことから、
+                    中国語に興味を持ち中国語の学習に力を入れていました。そこでの経験を活かしたいと思い新卒でNECチャイナソフトジャパンに就職しました。また、
+
+                </p>
+            </div>
+
+
+
+        </section>
     </div>
 
     <!--portfolio-->
     <div id="portfolio" class="container mt-64 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
         <section class="w-full">
-            <h2 class="secondary-title">私のポートフォリオ</h2>
+            <h2 class="secondary-title">プロジェクト</h2>
             <p class="section-paragraph:">
-                私が作成したプロダクト
+                今まで携わったプロジェクト
             </p>
-            <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
-                <img src="./images/portfolio1.jpg" alt=""
+            <div class="my-16 grid lg:grid-cols-2 md:grid-cols-1 grid-cols-1 gap-6">
+                <img src="./src/images/image1.jpg" alt=""
                     class="w-full h-36 lg:h-72 object-cover rounded-md cursor-pointer">
-                <img src="./images/portfolio2.jpg" alt=""
-                    class="w-full h-36 lg:h-72 object-cover rounded-md cursor-pointer">
-                <img src="./images/portfolio3.jpg" alt=""
-                    class="w-full h-36 lg:h-72 object-cover rounded-md cursor-pointer">
-                <img src="./images/portfolio4.jpg" alt=""
-                    class="w-full h-36 lg:h-72 object-cover rounded-md cursor-pointer">
-                <img src="./images/portfolio5.jpg" alt=""
-                    class="w-full h-36 lg:h-72 object-cover rounded-md cursor-pointer">
-                <img src="./images/portfolio6.jpg" alt=""
+                <img src="./src/images/image2.jpg" alt=""
                     class="w-full h-36 lg:h-72 object-cover rounded-md cursor-pointer">
             </div>
         </section>
@@ -93,7 +108,7 @@
         <section class="w-full">
             <h2 class="secondary-title">スキル一覧</h2>
             <p class="section-paragraph:">
-                私が取得したスキル
+                私が習得したスキル
             </p>
             <div class="my-16">
                 <div
@@ -106,18 +121,32 @@
 
                     <!-- 言語の説明 -->
                     <div class="text-center flex flex-wrap justify-center lg:text-left lg:block">
-                        <h3 class="text-3xl font-semibold">Java</h3>
-                        <div class="flex flex-wrap w-full justify-center gap-3 lg:w-auto lg:justify-start mt-6 mb-8">
-                            <div class="badge">webサイト</div>
-                            <div class="badge">バックエンド開発</div>
+                        <h3 class="text-3xl font-semibold">フロントエンド開発</h3>
+                        <div
+                            class="flex items-center flex-wrap w-full justify-center gap-3 lg:w-auto lg:justify-start mt-6 mb-8">
+                            <div>言語：</div>
+                            <div class="badge">JavaScript</div>
+                            <div class="badge">HTML</div>
+                            <div class="badge">CSS</div>
+                        </div>
+                        <div
+                            class="flex items-center flex-wrap w-full justify-center gap-3 lg:w-auto lg:justify-start mt-6 mb-8">
+                            <div>フレームワーク：</div>
+                            <div class="badge">tailwindcss</div>
+                            <div class="badge">JSF</div>
+                        </div>
+                        <div
+                            class="flex items-center flex-wrap w-full justify-center gap-3 lg:w-auto lg:justify-start mt-6 mb-8">
+                            <div>開発環境：</div>
+                            <div class="badge">IntelliJ IDEA</div>
+                            <div class="badge">VSCode</div>
+                            <div class="badge">Docker</div>
                         </div>
                         <p class="text-secondary">
-                            説明
+                            私は上記の技術を使用してプロダクトを製造しました。<br>
+                            詳細はクリックしてください。
                         </p>
                     </div>
-
-
-
                 </div>
                 <div
                     class="w-full border border-body p-16 lg:py-20 flex justify-center lg:justify-start flex-wrap lg:space-x-32 hover:border-black transition-all duration-300 cursor-pointer">
@@ -129,44 +158,33 @@
 
                     <!-- 言語の説明 -->
                     <div class="text-center flex flex-wrap justify-center lg:text-left lg:block">
-                        <h3 class="text-3xl font-semibold">Java</h3>
-                        <div class="flex flex-wrap w-full justify-center gap-3 lg:w-auto lg:justify-start mt-6 mb-8">
-                            <div class="badge">webサイト</div>
-                            <div class="badge">バックエンド開発</div>
+                        <h3 class="text-3xl font-semibold">バックエンド開発</h3>
+                        <div
+                            class="flex items-center flex-wrap w-full justify-center gap-3 lg:w-auto lg:justify-start mt-6 mb-8">
+                            <div>言語：</div>
+                            <div class="badge">Java</div>
+                            <div class="badge">SQL</div>
+                        </div>
+                        <div
+                            class="flex items-center flex-wrap w-full justify-center gap-3 lg:w-auto lg:justify-start mt-6 mb-8">
+                            <div>フレームワーク：</div>
+                            <div class="badge">JSF</div>
+                            <div class="badge">Hibernate</div>
+                        </div>
+                        <div
+                            class="flex items-center flex-wrap w-full justify-center gap-3 lg:w-auto lg:justify-start mt-6 mb-8">
+                            <div>開発環境：</div>
+                            <div class="badge">Oracle Database</div>
+                            <div class="badge">PostgreSQL</div>
+                            <div class="badge">Amazon EC2</div>
                         </div>
                         <p class="text-secondary">
-                            説明
+                            私は上記の技術を使用してプロダクトを製造しました。<br>
+                            詳細はクリックしてください。
                         </p>
                     </div>
-
-
-
-                </div>
-                <div
-                    class="w-full border border-body p-16 lg:py-20 flex justify-center lg:justify-start flex-wrap lg:space-x-32 hover:border-black transition-all duration-300 cursor-pointer">
-
-                    <!-- ロゴ -->
-                    <div class="mb-6 lg:mb-0 self-center">
-                        <i class="fa-brands fa-java text-8xl"></i>
-                    </div>
-
-                    <!-- 言語の説明 -->
-                    <div class="text-center flex flex-wrap justify-center lg:text-left lg:block">
-                        <h3 class="text-3xl font-semibold">Java</h3>
-                        <div class="flex flex-wrap w-full justify-center gap-3 lg:w-auto lg:justify-start mt-6 mb-8">
-                            <div class="badge">webサイト</div>
-                            <div class="badge">バックエンド開発</div>
-                        </div>
-                        <p class="text-secondary">
-                            説明
-                        </p>
-                    </div>
-
-
-
                 </div>
             </div>
-
         </section>
     </div>
 
@@ -178,7 +196,7 @@
             <p class="section-paragraph">
                 気になる方はご一報ください
             </p>
-            <div class="w-full grid lg:grid-cols-2 gap-8 lg:gap-32 mt-16">
+            <div class="w-full lg:grid-cols-2 gap-8 lg:gap-32 mt-16">
                 <div class="space-y-12">
                     <div>
                         <label class="text-black block mb-6 text-xl font-bold">お名前</label>
@@ -198,22 +216,24 @@
                             class="font-bold hover:text-selectedText transition-all duration-300">クリア</button>
                     </div>
                 </div>
-                <div>
-                    <p>080-9389-4027</p>
-                    <a href="mailto:jichuanzhidou@gmail.com"
-                        class="hover:text-selectedText transition-all duration-300">jichuanzhidou@gmail.com</a>
+                <!-- <div>
                     <div class="mt-10 space-x-6">
-                        <a href="#">
-                            <i class="fa-brands fa-x-twitter text-3xl text-black"></i>
+                        <a href="mailto:jichuanzhidou@gmail.com"
+                            class="hover:text-selectedText transition-all duration-300">
+                            <i class="fa-solid fa-envelope text-3xl"></i>
                         </a>
-                        <a href="#">
-                            <i class="fa-brands fa-instagram text-3xl text-pink-400"></i>
+                        <a href="#" class="hover:text-selectedText transition-all duration-300">
+                            <i class="fa-brands fa-x-twitter text-3xl"></i>
+                        </a>
+                        <a href="#" class="hover:text-selectedText transition-all duration-300">
+                            <i class="fa-brands fa-instagram text-3xl"></i>
                         </a>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
     </div>
+    <script src="test.js"></script>
 </body>
 <footer class="container mt-64 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
     <div class="footer_contents">

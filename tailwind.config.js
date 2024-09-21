@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: ["./**/*.{html,js}", "./index.html"],
   theme: {
     extend: {
       colors: {
@@ -15,7 +15,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      NotoSerifJP: ["Noto Serif JP", "serif"]
+      NotoSerifJP: ["Noto Serif JP", "serif"],
     }
   },
   plugins: [],
