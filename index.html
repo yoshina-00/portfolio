@@ -35,7 +35,19 @@
                 <a href="#contact" class="hover:text-selectedText transition-all duration-300">お問い合わせ</a>
 
             </div>
-            <div class="md:hidden "><i class="fa-solid fa-bars"></i></div>
+            <div class="md:hidden hover:text-selectedText transition-all duration-300">
+                <button id="barbutton" type="button" class="fixed top-6 right-6 z-10">
+                    <i id="bars" class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+            <ul id="menu"
+                class="fixed top-0 left-0 z-0 w-full translate-x-full bg-gray-500 opacity-50 text-center font-bold text-black transition-all ease-linear">
+                <li class="p-1"><a href="#home">ホーム</a></li>
+                <li class="p-1"><a href="#about">私について</a></li>
+                <li class="p-1"><a href="#portfolio">プロジェクト</a></li>
+                <li class="p-1"><a href="#skills">スキル一覧</a></li>
+                <li class="p-1"><a href="#contact">お問い合わせ</a></li>
+            </ul>
         </div>
     </header>
 
@@ -233,7 +245,12 @@
             </div>
         </section>
     </div>
-    <script src="test.js"></script>
+    <script>
+        barbutton.addEventListener('click', event => {
+            bars.classList.toggle('hidden')
+            menu.classList.toggle('translate-x-full')
+        });
+    </script>
 </body>
 <footer class="container mt-64 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
     <div class="footer_contents">
