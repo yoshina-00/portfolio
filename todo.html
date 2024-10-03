@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/output.css">
+    <title>カレンダー</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<body class="bg-body text-black">
+    <div class="border shadow-lg">
+        <div class="text-center p-6 text-black">
+            <div class="flex justify-between items-center">
+                <button id="prev" class="text-xl font-bold">&#8592;</button>
+                <h2 id="month-year" class="text-2xl font-bold"></h2>
+                <button id="next" class="text-xl font-bold">&#8594;</button>
+            </div>
+        </div>
+        <div class="container mx-auto grid grid-cols-7 gap-2 p-6 xl:max-w-screen-xl">
+            <!-- 曜日のヘッダー -->
+            <div class="text-center font-bold">日</div>
+            <div class="text-center font-bold">月</div>
+            <div class="text-center font-bold">火</div>
+            <div class="text-center font-bold">水</div>
+            <div class="text-center font-bold">木</div>
+            <div class="text-center font-bold">金</div>
+            <div class="text-center font-bold">土</div>
+            <!-- カレンダーの内容 -->
+            <div id="calendar" class="col-span-7 grid grid-cols-7 gap-2"></div>
+        </div>
+    </div>
+
+    <script>
+        const url = "https://api.notion.com/v1/databases/e1a5c0c2c5aa4cc885d2676c05269924/query"
+        const token = "secret_rfLzHYQs1DncVpTvaspTDCm8pgLeMP1zsbkYFDovZLf"
+
+        const monthYearElement = document.getElementById('month-year');
+        const calendarElement = document.getElementById('calendar');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+
+        let today = new Date();
+        let currentMonth = today.getMonth();
+        let currentYear = today.getFullYear();
+
+        const monthNames = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'];
+
+        function renderCalendar(month, year) {
+            // 月と年を表示
+            monthYearElement.textContent = `${year}年 ${monthNames[month]}`;
+
+            // カレンダーをリセット
+            calendarElement.innerHTML = '';
+
+            // 月の最初の日と最後の日
+            const firstDay = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+            // 前の月の日数を考慮するための空のセル
+            for (let i = 0; i < firstDay; i++) {
+                calendarElement.innerHTML += '<div></div>';
+            }
+
+            // 日付を追加
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dayElement = document.createElement('div');
+                dayElement.textContent = day;
+                dayElement.className = 'py-6 pt-0 pb-6 bg-white text-center border shadow-lg border-black rounded-lg border-solid';
+                if (day === today.getDate() && month === today.getMonth() && year === today.getFullYear()) {
+                    dayElement.classList.add('font-bold', 'text-blue-500');
+                }
+                calendarElement.appendChild(dayElement);
+
+                fetch(url, {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json',
+                        'Notion-Version': '2022-06-28'
+                    }
+                })
+                    .then(res => res.json())
+                    .then(json => json.results)
+                    .then(console.log)
+                    .catch(console.error);
+
+                const contentElement = document.createElement('div');
+                contentElement.textContent = fetch()
+            }
+        }
+
+        // 前の月へ
+        prevButton.addEventListener('click', () => {
+            currentMonth--;
+            if (currentMonth < 0) {
+                currentMonth = 11;
+                currentYear--;
+            }
+            renderCalendar(currentMonth, currentYear);
+        });
+
+        // 次の月へ
+        nextButton.addEventListener('click', () => {
+            currentMonth++;
+            if (currentMonth > 11) {
+                currentMonth = 0;
+                currentYear++;
+            }
+            renderCalendar(currentMonth, currentYear);
+        });
+
+        // 初期表示
+        renderCalendar(currentMonth, currentYear);
+    </script>
+</body>
+
+
+<footer class="container mt-64 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
+    <div class="footer_contents">
+        <div class="footer_logo hover:text-selectedText transition-all duration-300">
+            <a href="">Naoto Yoshikawa Portfolio</a>
+        </div>
+        <p class="copyright">©️2024 naoto yoshikawa. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</html>
