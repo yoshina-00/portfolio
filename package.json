@@ -101,8 +101,11 @@
     "yaml": "^2.5.0"
   },
   "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
     "test": "jest",
-    "build": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+    "build-tw": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
   },
   "keywords": [],
   "author": "",
