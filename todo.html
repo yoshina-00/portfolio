@@ -15,17 +15,25 @@
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<body class="bg-body text-black font-sans">
+<body class="bg-body text-black font-NotoSerifJP">
     <div class="container mx-auto mt-12">
         <div class="bg-body shadow-lg rounded-lg p-6">
             <!-- カレンダーのヘッダー -->
             <div class="flex justify-between items-center mb-6">
-                <button id="prev" class="text-xl font-bold px-4 py-2 bg-blue-500 text-white rounded-lg shadow-md">
-                    &larr;
+                <button id="prev" class="text-xl font-bold px-4 py-2">
+                    <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                        </path>
+                    </svg>
                 </button>
+
                 <h2 id="month-year" class="text-2xl font-bold"></h2>
-                <button id="next" class="text-xl font-bold px-4 py-2 bg-blue-500 text-white rounded-lg shadow-md">
-                    &rarr;
+                <button id="next" class="text-xl font-bold px-4 py-2">
+                    <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
                 </button>
             </div>
 

@@ -221,79 +221,136 @@
                 お問い合わせは下記のフォームからお願いいたします。<br /><span class="text-red-700"> * </span>は必ず入力してください。
             </p>
             <div class="w-full lg:grid-cols-2 gap-8 lg:gap-32 mt-16">
-                <div class="space-y-12">
+                <form id="contactForm" class="space-y-12" action= "" method="POST">
                     <div>
                         <label class="text-black block mb-6 text-xl font-bold" for="type">お問い合わせの種類<span
                                 class="text-red-700"> *
                             </span></label>
                         <select id="type" class="rounded-md w-full border-black bg-white pw-4 py-4">
+                            <option value="" selected>選択してください</option>
                             <option>当サイトの内容について</option>
                             <option>経歴について</option>
                             <option>その他</option>
                         </select>
+                        <div id="typeError" class="text-red-700"></div>
                     </div>
                     <div>
                         <label class="text-black block mb-6 text-xl font-bold">お名前<span class="text-red-700"> *
                             </span></label>
-                        <input type="text" placeholder="田中　太郎"
+                        <input id="name"type="text" placeholder="田中　太郎"
                             class="rounded-md w-full border-black bg-white pw-4 py-4">
+                            <div id ="nameError" class="text-red-700"></div>
                     </div>
                     <div>
                         <label class="text-black block mb-6 text-xl font-bold">メールアドレス<span class="text-red-700"> *
                             </span></label>
-                        <input type="text" placeholder="tanaka@example.com"
+                        <input id= "email" type="text" placeholder="tanaka@example.com"
                             class="rounded-md w-full  border-black bg-white pw-4 py-4">
+                            <div id ="emailError" class="text-red-700"></div>
                     </div>
                     <div>
                         <label class="text-black block mb-6 text-xl font-bold">電話番号</label>
-                        <input type="text" placeholder="00000000000"
+                        <input id = "phone"type="text" placeholder="00000000000"
                             class="rounded-md w-full  border-black bg-white pw-4 py-4">
+                            <div id ="phoneError" class="text-red-700"></div>
                     </div>
                     <div>
                         <label class="text-black block mb-6 text-xl font-bold">メッセージ<span class="text-red-700"> *
                             </span></label>
-                        <input type="text" placeholder="こちらにお問い合わせ内容を入力してください"
+                        <input id= "message" type="text" placeholder="こちらにお問い合わせ内容を入力してください"
                             class="rounded-md w-full  border-black bg-white pw-4 py-4">
+                            <div id ="messageError" class="text-red-700"></div>
                     </div>
                     <div class="flex justify-between">
-                        <button class="font-bold hover:text-selectedText transition-all duration-300">送信</button>
-                        <button type="reset"
+                        <button type="submit" class="font-bold hover:text-selectedText transition-all duration-300">送信</button>
+                        <button id="clearButton"type="reset"
                             class="font-bold hover:text-selectedText transition-all duration-300">クリア</button>
                     </div>
-                </div>
-                <!-- <div>
-                    <div class="mt-10 space-x-6">
-                        <a href="mailto:jichuanzhidou@gmail.com"
-                            class="hover:text-selectedText transition-all duration-300">
-                            <i class="fa-solid fa-envelope text-3xl"></i>
-                        </a>
-                        <a href="#" class="hover:text-selectedText transition-all duration-300">
-                            <i class="fa-brands fa-x-twitter text-3xl"></i>
-                        </a>
-                        <a href="#" class="hover:text-selectedText transition-all duration-300">
-                            <i class="fa-brands fa-instagram text-3xl"></i>
-                        </a>
-                    </div>
-                </div> -->
+                </form>
             </div>
         </section>
     </div>
     <script>
-        barbutton.addEventListener('click', event => {
-            bars.classList.toggle('hidden')
-            menu.classList.toggle('translate-x-full')
+        barbutton.addEventListener("click", event => {
+            bars.classList.toggle("hidden")
+            menu.classList.toggle("translate-x-full")
         });
 
         // JavaScriptを使って動的にページ遷移を管理したい場合
-        const links = document.querySelectorAll('nav a');
+        const links = document.querySelectorAll("nav a");
         links.forEach(link => {
-            link.addEventListener('click', (event) => {
+            link.addEventListener("click", (event) => {
                 event.preventDefault(); // デフォルトの遷移を防ぐ
-                const targetPage = link.getAttribute('href');
+                const targetPage = link.getAttribute("href");
                 // ここで遷移先のページを表示するロジックを書く
                 window.location.href = targetPage; // ページ遷移
             });
         });
+
+        //バリデーションチェック
+        document.getElementById("contactForm").addEventListener("submit",function(event){
+            event.preventDefault(); 
+
+            const type = document.getElementById("type").value;
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            
+            //初期化
+            document.getElementById("typeError").textContent = "";
+            document.getElementById("nameError").textContent = "";
+            document.getElementById("emailError").textContent = "";
+            document.getElementById("messageError").textContent = "";
+            document.getElementById("phoneError").textContent = ";"
+
+            let isValid = true;
+
+            if (type === "") {
+                document.getElementById("typeError").textContent = "お問い合わせの種類を選択してください。";
+                isValid = false;
+            }
+
+            if (name === "") {
+                document.getElementById("nameError").textContent = "お名前を入力してください。";
+                isValid = false;
+            }
+
+            if (email === "" || !email.includes("@")) {
+                document.getElementById("emailError").textContent = "正しいメールアドレスを入力してください。";
+                isValid = false;
+            }
+
+            if (message === "") {
+                document.getElementById("messageError").textContent = "メッセージを入力してください。";
+                isValid = false;
+            }
+
+            if (!/^\d+$/.test(phone)){
+                document.getElementById("phoneError").textContent = "電話番号には数字のみを入力してください。";
+                isValid = false;
+            }
+
+            if (isValid) {
+                alert("フォームが正常に送信されました");
+                this.submit();
+        }
+
+        });
+
+
+
+        //クリアボタン押下時
+        document.getElementById("clearButton").addEventListener("click", function(){
+
+            document.getElementById("type").textContent = "";
+            document.getElementById("name").textContent = "";
+            document.getElementById("email").textContent = "";
+            document.getElementById("message").textContent = "";
+
+        })
+
+
     </script>
 </body>
 <footer class="container mt-64 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">

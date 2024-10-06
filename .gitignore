@@ -2,3 +2,8 @@
 .env
 .history
 .next
+.storybook
+src/stories
+reactSample
+*storybook.log
+eslint.config.mjs
